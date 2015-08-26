@@ -4,14 +4,20 @@
     <title>EnergyOverview</title>    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
+
   <body>
-   
     <header>
       <div class="container">
-        <h1 class="logo">Flask App</h1>
+        <h1 class="logo">Power Analyzer (pre Alpha)</h1>
+        <nav>
+          <h3><ul class="menu">
+            <li><a href="{{ url_for('home') }}">Overview</a></li>
+            <li><a href="{{ url_for('adddevice') }}">Add a new device</a></li>
+          </ul></h3>
+        </nav>
       </div>
     </header> 
-     
+
     <div class="container">
       {% block content %}
       {% endblock %}
