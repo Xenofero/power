@@ -1,13 +1,20 @@
 # -*- coding: iso-8859-1 -*-
 from flask import Flask, render_template, request, flash
 from forms import AddForm
-import shelve
+import simplejson
 
 app = Flask(__name__)
 app.secret_key = 'energy key'
 
+
 @app.route('/')
 def home():
+    try:
+        with open('devices.json', 'r') as fp:
+            jsondata = simplejson.load(fp)
+            print jsondata['name']
+    except:
+        print 'no Devices'
     return render_template('home.html')
 
 
@@ -18,20 +25,26 @@ def adddevice():
     # Eingabe
     if request.method == 'POST':
         # Fehler
-        if form.validate() == False:
+        if not form.validate():
             flash('Error, validation faild.')
             return render_template('add.html', form=form)
 
-        # RÃ¼ckgabe + Speichern
+        # Rückgabe + Speichern
         else:
-            device = eval(form.device.data)
-            energy = eval(form.energyusage.data)
-            hours = eval(form.hoursperweek.data)
-            sh = shelve.open("devices.slv", flag="c")
-            sh[device] = {'energy': energy, 'hours': hours}
-            sh.close()
 
-            return render_template('add.html', success=True, device=device)
+            device = {'name': str(form.device.data),
+                      'energy': str(form.energyusage.data),
+                      'hours': str(form.hoursperweek.data)}
+
+            with open('devices.json') as fp:
+                devices = simplejson.load(fp)
+
+            devicesd= str(devices)+str(device)
+
+            with open('devices.json', 'w') as fp:
+                simplejson.dump(device, fp)
+
+            return render_template('add.html', success=True, device=str(form.device.data))
 
     elif request.method == 'GET':
         return render_template('add.html', form=form)
