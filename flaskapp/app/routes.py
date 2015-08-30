@@ -1,7 +1,7 @@
 # -*- coding: iso-8859-1 -*-
 from flask import Flask, render_template, request, flash
 from forms import AddForm
-import json
+import json, ldap
 
 app = Flask(__name__)
 app.secret_key = 'energy key'
