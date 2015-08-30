@@ -1,7 +1,7 @@
 # -*- coding: iso-8859-1 -*-
 from flask import Flask, render_template, request, flash
 from forms import AddForm
-import simplejson
+import json
 
 app = Flask(__name__)
 app.secret_key = 'energy key'
@@ -9,13 +9,13 @@ app.secret_key = 'energy key'
 
 @app.route('/')
 def home():
-    try:
-        with open('devices.json', 'r') as fp:
-            jsondata = simplejson.load(fp)
-            print jsondata['name']
-    except:
-        print 'no Devices'
-    return render_template('home.html')
+#    try:
+    with open("devices.json", 'r') as fp:
+        jsondata = json.load(fp)
+        print jsondata
+#    except:
+#        print 'no Devices'
+    return render_template('home.html', data=jsondata)
 
 
 @app.route('/adddevice', methods=['GET', 'POST'])
@@ -31,18 +31,13 @@ def adddevice():
 
         # Rückgabe + Speichern
         else:
-
-            device = {'name': str(form.device.data),
-                      'energy': str(form.energyusage.data),
-                      'hours': str(form.hoursperweek.data)}
-
             with open('devices.json') as fp:
-                devices = simplejson.load(fp)
+                devices = json.load(fp)
+            print 'JSON', json.dumps(devices)
 
-            devicesd= str(devices)+str(device)
-
+            devices.append({"name": str(form.device.data), "energy": str(form.energyusage.data), "hours": str(form.hoursperweek.data)})
             with open('devices.json', 'w') as fp:
-                simplejson.dump(device, fp)
+                json.dump(devices, fp)
 
             return render_template('add.html', success=True, device=str(form.device.data))
 
