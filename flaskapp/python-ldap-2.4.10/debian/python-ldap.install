@@ -1,0 +1,4 @@
+debian/tmp/usr/lib/python*/*-packages/_ldap.so
+debian/tmp/usr/lib/python*/*-packages/*.egg-info
+debian/tmp/usr/lib/python*/*-packages/*.py
+debian/tmp/usr/lib/python*/*-packages/*/

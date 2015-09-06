@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python2
+
+override_dh_installdocs:
+	dh_installdocs --link-doc=python-ldap
+
+override_dh_strip:
+	dh_strip --dbg-package=python-ldap-dbg

@@ -1,0 +1,423 @@
+python-ldap (2.4.10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Matej Vela <vela@debian.org>  Thu, 07 Jun 2012 19:53:38 +0100
+
+python-ldap (2.4.9-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Matej Vela <vela@debian.org>  Wed, 14 Mar 2012 23:43:54 +0100
+
+python-ldap (2.4.8-1) unstable; urgency=low
+
+  * New upstream release; thanks to Robin Wittler.  Closes: #651687.
+  * Suggest python-pyasn1 for ldap.controls.*, ldap.extop.*, ldap.syncrepl.
+  * Drop ${python:Breaks} (#631397).
+  * Conforms to Standards version 3.9.3.
+
+ -- Matej Vela <vela@debian.org>  Tue, 28 Feb 2012 15:32:47 +0100
+
+python-ldap (2.3.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch from dh_pycentral to dh_python2.  Closes: #617010.
+  * Switch to dpkg-source 3.0 (quilt) format.
+  * Switch to debhelper 8.
+  * Conforms to Standards version 3.9.2.
+
+ -- Matej Vela <vela@debian.org>  Sat, 30 Apr 2011 16:06:02 +0200
+
+python-ldap (2.3.11-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Matej Vela <vela@debian.org>  Tue, 27 Apr 2010 04:47:18 +0200
+
+python-ldap (2.3.10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Matej Vela <vela@debian.org>  Sat, 31 Oct 2009 21:19:35 +0100
+
+python-ldap (2.3.9-3) unstable; urgency=low
+
+  * Allow for Python 2.6 installation paths (*/dist-packages rather than
+    */site-packages).  Closes: #547845.
+
+ -- Matej Vela <vela@debian.org>  Thu, 24 Sep 2009 09:03:34 +0200
+
+python-ldap (2.3.9-2) unstable; urgency=low
+
+  * Switch to debhelper 7.
+  * Provide python-ldap-dbg.  Closes: #529874.
+
+ -- Matej Vela <vela@debian.org>  Wed, 05 Aug 2009 19:32:05 +0200
+
+python-ldap (2.3.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control, debian/watch: Update upstream URL.
+  * Conforms to Standards version 3.8.2.
+
+ -- Matej Vela <vela@debian.org>  Wed, 05 Aug 2009 17:38:13 +0200
+
+python-ldap (2.3.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: Update upstream URL.
+
+ -- Matej Vela <vela@debian.org>  Thu, 30 Apr 2009 15:23:30 +0200
+
+python-ldap (2.3.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: Update upstream URL.
+
+ -- Matej Vela <vela@debian.org>  Thu, 09 Apr 2009 21:11:22 +0200
+
+python-ldap (2.3.6-1) unstable; urgency=low
+
+  * New upstream release.  Closes: #504835.
+  * Conforms to Standards version 3.8.1.
+
+ -- Matej Vela <vela@debian.org>  Mon, 06 Apr 2009 10:29:03 +0200
+
+python-ldap (2.3.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop openldap_2.1.diff (we've been using 2.4 for a while).
+  * Convert back to a monolithic .diff.gz, it's pretty simple now.
+  * Add Homepage field.
+  * Conforms to Standards version 3.8.0.
+
+ -- Matej Vela <vela@debian.org>  Tue, 08 Jul 2008 19:47:41 +0200
+
+python-ldap (2.3.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Matej Vela <vela@debian.org>  Sat, 29 Mar 2008 15:25:36 +0100
+
+python-ldap (2.3.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Conforms to Standards version 3.7.3.
+
+ -- Matej Vela <vela@debian.org>  Wed, 26 Mar 2008 18:43:29 +0100
+
+python-ldap (2.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Matej Vela <vela@debian.org>  Thu, 26 Jul 2007 17:27:19 +0200
+
+python-ldap (2.3-2) unstable; urgency=low
+
+  * Build for Python 2.5.  Closes: #411799.
+
+ -- Matej Vela <vela@debian.org>  Sat,  5 May 2007 06:34:54 +0200
+
+python-ldap (2.3-1) unstable; urgency=low
+
+  * New upstream release.
+    - LDIF parser now handles changetype.  Closes: #413980.
+    - debian/patches/openldap_2.1.diff: More changes for compatibility
+      with OpenLDAP 2.1 (upstream assumes 2.3+).
+    - debian/patches/passwd_none.diff: Integrated upstream.
+  * debian/python-ldap.preinst: Don't remove /usr/share/doc/python-ldap as
+    it is no longer being replaced with a symlink to python2.3-ldap.
+
+ -- Matej Vela <vela@debian.org>  Tue, 10 Apr 2007 22:09:18 +0200
+
+python-ldap (2.2.0-3) unstable; urgency=low
+
+  * Prune indirectly used libraries from the link line and from build
+    dependencies (specifically, `-lssl -lcrypto' and libssl-dev).  See
+    <http://lists.debian.org/debian-devel-announce/2005/11/msg00016.html>.
+  * Switch to python-central.
+
+ -- Matej Vela <vela@debian.org>  Wed,  9 Aug 2006 15:48:00 +0200
+
+python-ldap (2.2.0-2) unstable; urgency=low
+
+  * Acknowledge NMU.  Thanks, Pierre!
+  * Build depend on cdbs (>= 0.4.41) to ensure it supports the new
+    Python policy (#373628).
+  * Remove `dummy package' from the description.
+  * debian/patches/passwd_none.diff: Accept None for user, oldpw, newpw
+    in passwd().  Backported from CVS, partially fixes #291230.
+  * debian/rules: cdbs now cleans the build directory on its own.
+  * Conforms to Standards version 3.7.2.
+
+ -- Matej Vela <vela@debian.org>  Fri,  7 Jul 2006 20:33:50 +0200
+
+python-ldap (2.2.0-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Update to the new python policy (Closes: #373322).
+
+ -- Pierre Habouzit <madcoder@debian.org>  Thu, 29 Jun 2006 11:49:30 +0200
+
+python-ldap (2.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Split python-ldap-doc into a separate source package in contrib due
+    to its build dependency on latex2html.
+  * debian/patches/openldap_2.1.diff: Preserve compatibility with the
+    currently packaged OpenLDAP libraries.
+
+ -- Matej Vela <vela@debian.org>  Mon, 10 Apr 2006 08:21:13 +0200
+
+python-ldap (2.0.11-2) unstable; urgency=low
+
+  * debian/patches/result3_tuple_size.diff: Fix tuple size in result3().
+    Thanks to Alessandro Ogier for the patch (SF#1368108; fixed in CVS).
+    Closes: #357932.
+
+ -- Matej Vela <vela@debian.org>  Mon, 20 Mar 2006 12:29:57 +0100
+
+python-ldap (2.0.11-1) unstable; urgency=low
+
+  * New maintainer.  Closes: #354618.
+  * New upstream release.  Closes: #343374.
+    - Features specific to OpenLDAP 2.1+ are now used only if available.
+      Closes: #293585.
+  * Switch to cdbs.
+  * debian/patches/opt_api_info.diff: LDAPAPIInfo.ldapai_vendor_version is
+    an integer rather than a string.  Closes: #278795.
+  * Add support for Python 2.4.  Closes: #324847.
+  * Remove support for Python 2.1/2.2.  Closes: #351142.
+  * Fix typo in description.  Closes: #300040, #300045, #300062, #300070.
+  * Distribute examples with python-ldap-doc.  Closes: #269496, #306513.
+  * Remove empty files from python-ldap-doc.
+  * Replace /usr/share/doc/python-ldap with a symlink to python2.3-ldap.
+  * debian/copyright: Add Peter and myself to the list of maintainers.
+  * debian/python-ldap-doc.doc-base: Add.
+  * debian/watch: Add.
+  * debian/README.Debian: LDAPv3 warning no longer relevant; remove.
+  * debian/TODO.Debian: All done; remove.
+  * debian/python-ldap.preinst, debian/python2.3-ldap.preinst: Remove
+    woody compatibility code.
+  * Conforms to Standards version 3.6.2.
+
+ -- Matej Vela <vela@debian.org>  Mon, 27 Feb 2006 20:50:04 +0100
+
+python-ldap (2.0.4-1) unstable; urgency=low
+
+  * New upstream version. This possibly closes bug 273916, but I'll need
+    confirmation from the submitter before closing the bug.
+
+ -- Peter Hawkins <peterh@debian.org>  Wed, 10 Nov 2004 10:18:01 +1100
+
+python-ldap (2.0.1-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Peter Hawkins <peterh@debian.org>  Sat, 10 Jul 2004 15:07:07 +1000
+
+python-ldap (1.9.999.pre19-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Peter Hawkins <peterh@debian.org>  Sat, 24 Jan 2004 09:41:50 +1100
+
+python-ldap (1.9.999.pre14-2) unstable; urgency=low
+
+  * New upstream version. This release has added the ldap.filter module
+    to setup.py. (closes: #204832)
+  * Acknowledged bugs from the two previous NMUs (closes: #206492, #205755)
+  * Updated standards version to 3.6.1.
+  * Build python2.1-ldap without thread support. As far as I'm aware, no-one
+    was actually using the reentrant build (I silently introduced it several
+    revisions ago without any requests/complaints until now). If you need
+    thread support, use a newer python version (zope is one of the few
+    remaining users of python 2.1). (closes: #207226).
+  * Remove .pyo files left by previous versions of python-ldap in the preinst
+    script (closes: #198521)
+
+ -- Peter Hawkins <peterh@debian.org>  Wed, 15 Oct 2003 19:21:49 +1000
+
+python-ldap (1.9.999.pre13-1.2) unstable; urgency=low
+
+  * NMU to correct my previous NMU, sorry.
+  * Correct dependencies (closes: #206492).
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 21 Aug 2003 13:33:17 +0200
+
+python-ldap (1.9.999.pre13-1.1) unstable; urgency=low
+
+  * NMU.
+  * Rebuild for python 2.3 (closes: #205755).
+  * Standards-version is 3.6.0.
+
+ -- Josselin Mouette <joss@debian.org>  Tue, 19 Aug 2003 11:56:11 +0200
+
+python-ldap (1.9.999.pre13-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Peter Hawkins <peterh@debian.org>  Fri, 13 Jun 2003 14:18:43 +1000
+
+python-ldap (1.9.999.pre12-1) unstable; urgency=low
+
+  * New upstream release.
+    Upstream added code fixing the problems with ldap modLists. I haven't
+    heard back from the submitter, so I'm assuming that the fix was ok. This
+    upload therefore (closes: #175710).
+  * Added 'exit 0' to the end of the prerm scripts.
+  * Added note to README.Debian about the change in default LDAP protocol
+    version to v3.
+  * Updated standards version to 3.5.10. 
+
+ -- Peter Hawkins <peterh@debian.org>  Wed, 28 May 2003 11:59:51 +1000
+
+python-ldap (1.9.999.pre11-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now Build-Depends on libsasl2-dev, not libsasl-dev. Removed Depends
+    on libldap2-tls.
+
+ -- Peter Hawkins <peterh@debian.org>  Sat,  3 May 2003 11:40:20 +1000
+
+python-ldap (1.9.999.pre08-1) unstable; urgency=low
+
+  * New upstream release (small bugfix release over 2.0.0pre07 to fix
+    python 2.1 compatibility upstream).
+  * Seperate binary-all and binary-arch targets in debian/rules and
+    make them build the correct things. (closes: #188600)
+  * Change the package section to python.
+
+ -- Peter Hawkins <peterh@debian.org>  Sat, 12 Apr 2003 08:33:21 +1000
+
+python-ldap (1.9.999.pre07-1) unstable; urgency=low
+
+  * Updated standards version to 3.5.9.
+  * Merge TLS builds into standard packages. This involved some evil
+    monkeying with dpkg-divert to work around what I think is a dpkg bug
+    Please yell at me if the upgrade fails (I have no doubt that will
+    happen anyway).
+  * Removed full stop from end of python-ldap-doc description to shut up
+    lintian.
+  * New upstream release.
+  * Set DH_COMPAT in debian/rules (closes: #185320).
+
+ -- Peter Hawkins <peterh@debian.org>  Fri, 11 Apr 2003 20:38:54 +1000
+
+python-ldap (1.9.999.pre06-1) unstable; urgency=low
+
+  * New upstream version (incorporating patch to 76722).
+  * Moved byte-compilation into postinst and prerm scripts.
+  * Split docs away from module packages.
+  * Added TLS support modules.
+  * Build SASL in by default.
+
+ -- Peter Hawkins <peterh@debian.org>  Wed, 25 Sep 2002 15:51:34 +1000
+
+python-ldap (1.9.999.pre05-3) unstable; urgency=low
+
+  * Added Conflicts: field to control file to shut dpkg up even more.
+  * Added Python 2.3 version.
+  * Changed default python version to 2.2.
+
+ -- Peter Hawkins <peterh@debian.org>  Sat, 14 Sep 2002 09:56:35 +1000
+
+python-ldap (1.9.999.pre05-2) unstable; urgency=low
+
+  * Added Replaces: field to control file to shut dpkg up on upgrade.
+    (closes: #157015)
+
+ -- Peter Hawkins <peterh@debian.org>  Sat, 17 Aug 2002 20:03:25 +1000
+
+python-ldap (1.9.999.pre05-1) unstable; urgency=low
+
+  * New upstream version.
+  * Really fixed segfault (sorry, I forgot to include my own patch in the
+    last upload). (closes: #76722)
+
+ -- Peter Hawkins <peterh@debian.org>  Fri, 16 Aug 2002 19:50:47 +1000
+
+python-ldap (1.9.999.pre04-2) unstable; urgency=low
+
+  * Extensive hacking of debian/* files to build package for multiple python
+    versions. (closes: #151640)
+  * Added HTML documentation to package (closes: #76718)
+  * Patch to prevent segfault (closes: #76722)
+  * New maintainer - Peter Hawkins <peterh@debian.org> (with Gregor's
+    permission)
+
+ -- Peter Hawkins <peterh@debian.org>  Mon, 12 Aug 2002 15:19:00 +1000
+
+python-ldap (1.9.999.pre04-1) unstable; urgency=low
+
+  * New upstream version: 2.0.0pre04.
+  * Examples have been removed upstream.
+
+ -- Gregor Hoffleit <flight@debian.org>  Wed, 20 Feb 2002 22:36:29 +0100
+
+python-ldap (1.9.999.cvs.20011231-1) unstable; urgency=low
+
+  * New upstream version from CVS.
+  * copyright: new home page http://python-ldap.sourceforge.net/
+    (closes: #94854).
+
+ -- Gregor Hoffleit <flight@debian.org>  Mon, 31 Dec 2001 16:47:57 +0100
+
+python-ldap (1.9.999.cvs.20011115-1) unstable; urgency=low
+
+  * New upstream version from CVS:
+    - Compiles against OpenLDAP 2.0.x (closes: #76717, #84508).
+  * Built against Python 2.1 (closes: #118405).
+  * Docs removed for now (are not up to date anyway) (closes: #72026, #67330,
+    #78417).
+
+ -- Gregor Hoffleit <flight@debian.org>  Fri, 16 Nov 2001 19:35:10 +0100
+
+python-ldap (1.8-1) unstable; urgency=low
+
+  * New upstream version:
+    - features class-based exceptions
+      (closes: Bug#50837: python-ldap: exceptions should be class-based).
+    - Documentation is now included in pdf format instead of ps.
+
+ -- Gregor Hoffleit <flight@debian.org>  Tue, 30 Nov 1999 15:48:15 +0100
+
+python-ldap (1.7-1) unstable; urgency=low
+
+  * New upstream version.
+  * Moved documentation to /usr/share/doc, closes: Bug#46661.
+
+ -- Gregor Hoffleit <flight@debian.org>  Thu, 14 Oct 1999 10:43:56 +0200
+
+python-ldap (1.5-1) unstable; urgency=low
+
+  * New upstream version.
+  * Now uses openldap instead of umich-ldap (closes Bug#36462: Python-ldap
+    should use openldap not umich, closes Bug#35384: python-ldap vs
+    openldap).
+  * examples/test.py was modified to work with the default Debian
+    openldapd setup.
+
+ -- Gregor Hoffleit <flight@debian.org>  Thu, 22 Apr 1999 11:11:07 +0200
+
+python-ldap (1.4-2) frozen unstable; urgency=low
+
+  * Maintainer upload (closes Bug#28217).
+  * debian/control: The preferred maintainer email address is
+    <flight@debian.org>.
+
+ -- Gregor Hoffleit <flight@debian.org>  Mon,  2 Nov 1998 15:09:31 +0100
+
+python-ldap (1.4-1.1) unstable; urgency=low
+
+  * non-maintainer (binary-only) upload for Alpha
+  * create directory debian/tmp/usr/libpython1.5 before calling 'make install'
+
+ -- Paul Slootman <paul@debian.org>  Mon, 19 Oct 1998 21:44:33 +0200
+
+python-ldap (1.4-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Gregor Hoffleit <flight@debian.org>  Wed, 14 Oct 1998 10:34:11 +0200

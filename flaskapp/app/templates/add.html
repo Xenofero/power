@@ -5,29 +5,83 @@
     {% if success %}
         <h2> {{ device }} was successfully added</h2>
     {% else %}
-        <h2>Adding a new Device</h2>
+        <h2>Adding a VM</h2>
 
         <form action="{{ url_for('adddevice') }}" method=post>
             {{ form.hidden_tag() }}
 
-            {{ form.device.label }}
-            {{ form.device }}
-            {% for message in form.device.errors %}
+            {{ form.servername.label }}
+            {{ form.servername }}
+            {% for message in form.servername.errors %}
                 <div class="flash">{{ message }}</div>
             {% endfor %}
 
-            {{ form.energyusage.label }}
-            {{ form.energyusage }}
-            {% for message in form.energyusage.errors %}
+            {{ form.internalname.label }}
+            {{ form.internalname }}
+            {% for message in form.internalname.errors %}
                 <div class="flash">{{ message }}</div>
             {% endfor %}
 
-            {{ form.hoursperweek.label }}
-            {{ form.hoursperweek }}
-            {% for message in form.hoursperweek.errors %}
+            {{ form.mainresponsible.label }}
+            {{ form.mainresponsible }}
+            {% for message in form.mainresponsible.errors %}
                 <div class="flash">{{ message }}</div>
             {% endfor %}
 
+            {{ form.substitute.label }}
+            {{ form.substitute }}
+            {% for message in form.substitute.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.costcenter.label }}
+            {{ form.costcenter }}
+            {% for message in form.costcenter.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.location.label }}
+            {{ form.location }}
+            {% for message in form.location.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.department.label }}
+            {{ form.department }}
+            {% for message in form.department.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.servertype.label }}
+            {{ form.servertype }}
+            {% for message in form.servertype.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.serverdescription.label }}
+            {{ form.serverdescription }}
+            {% for message in form.serverdescription.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.serverservice.label }}
+            {{ form.serverservice }}
+            {% for message in form.serverservice.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.workloadservice.label }}
+            {{ form.workloadservice }}
+            {% for message in form.workloadservice.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.workloadintime.label }}
+            {{ form.workloadintime }}
+            {% for message in form.workloadintime.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+            
             {{ form.submit }}
         </form>
 
