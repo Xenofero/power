@@ -10,7 +10,7 @@ body {
  */
   
 header {
-  background-color: #2B2B2B;
+  background-color: #FF8000;
   height: 35px;
   width: 100%;
   opacity: .9;
@@ -63,6 +63,10 @@ h3 {
   color: #999;
 }
 
+table, th, td {
+  border: 1px solid orange;
+  text-align: left;
+}
 /*
  * Display navigation links inline
  */
@@ -81,7 +85,7 @@ h3 {
 }
  
 .menu li a {
-  color: #999;
+  color: #000;
   text-decoration: none;
 }
 
@@ -95,17 +99,16 @@ form label {
   padding: 10px 0;
 }
  
-form input#device,
-form input#energyusage,
-form input#hoursperweek {
-  width: 400px;
+form input {
+  width: 600px;
   background-color: #fafafa;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
   border: 1px solid #cccccc;
   padding: 5px;
-  font-size: 1.1em;
+  font-size: 1.0em;
+  align: left;
 }
  
 form input#submit {

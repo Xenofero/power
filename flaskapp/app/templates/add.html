@@ -81,7 +81,79 @@
             {% for message in form.workloadintime.errors %}
                 <div class="flash">{{ message }}</div>
             {% endfor %}
-            
+
+            {{ form.privacyrelatedfiles.label }}
+            {{ form.privacyrelatedfiles }}
+            {% for message in form.privacyrelatedfiles.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.dependencies.label }}
+            {{ form.dependencies }}
+            {% for message in form.dependencies.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.redundancy.label }}
+            {{ form.redundancy }}
+            {% for message in form.redundancy.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.bootorder.label }}
+            {{ form.bootorder }}
+            {% for message in form.bootorder.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.impactforotherserver.label }}
+            {{ form.impactforotherserver }}
+            {% for message in form.impactforotherserver.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.departmentaffected.label }}
+            {{ form.departmentaffected }}
+            {% for message in form.departmentaffected.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.furtherwork.label }}
+            {{ form.furtherwork }}
+            {% for message in form.furtherwork.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.cost.label }}
+            {{ form.cost }}
+            {% for message in form.cost.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.serviceaccount.label }}
+            {{ form.serviceaccount }}
+            {% for message in form.serviceaccount.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.purposeaccount.label }}
+            {{ form.purposeaccount }}
+            {% for message in form.purposeaccount.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.manuallyrestart.label }}
+            {{ form.manuallyrestart }}
+            {% for message in form.manuallyrestart.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {{ form.otherinformation.label }}
+            {{ form.otherinformation }}
+            {% for message in form.otherinformation.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
             {{ form.submit }}
         </form>
 

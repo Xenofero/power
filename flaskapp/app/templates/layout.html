@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EnergyOverview</title>    
+    <title>VM Overview</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
 
   <body>
-    <header>
+  <center><img src="https://secure-media.ztat.net/media/teaser/logo/zalando-logo.png"></center>
+  <header>
       <div class="container">
-        <h1 class="logo">Power Analyzer (pre Alpha)</h1>
+        <h1 class="logo">VM Overview (pre Alpha)</h1>
         <nav>
           <h3><ul class="menu">
-            <li><a href="{{ url_for('home') }}">Overview</a></li>
-            <li><a href="{{ url_for('adddevice') }}">Add a new device</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('adddevice') }}">Add a new VM</a></li>
           </ul></h3>
         </nav>
       </div>
@@ -22,6 +23,5 @@
       {% block content %}
       {% endblock %}
     </div>
-     
   </body>
 </html>

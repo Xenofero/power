@@ -4,12 +4,24 @@
         <h2>Welcome to the VM overview!</h2>
         <h3>Here you see all VMs</h3>
         <table>
-            {% for dev in data %}
+            <tr>
+                <th>Servername</th>
+                <th>Servertype</th>
+                <th>Serverservice</th>
+                <th>Mainresponsible</th>
+                <th></th>
+            </tr>
+            {% for vm in data %}
                 <tr>
-                    {% for key, value in dev.iteritems() %}
-                        <th>{{ key }}</th>
-                        <td>{{ value }}</td>
-                    {% endfor %}
+                    <td>{{ vm[0][1]['servername'][0] }}</td>
+                    <td>{{ vm[0][1]['servertype'][0] }}</td>
+                    <td>{{ vm[0][1]['serverservice'][0] }}</td>
+                    <td>{{ vm[0][1]['mainresponsible'][0] }}</td>
+                    <td>
+                        <a href="{{ url_for('adddevice', servername=vm[0][1]['servername'][0])}}">
+                            Edit
+                        </a>
+                    </td>
                 </tr>
             {% endfor %}
         </table>
